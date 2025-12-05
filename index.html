@@ -3,19 +3,110 @@
 <head>
 	<meta charset="utf-8">
 	
-	<title>Sigende titel</title>
+	<title>KlimaKassen - lær, reparer og gør en forskel</title>
 	
 	<meta name="robots" content="All">
 	<meta name="author" content="Udgiver">
 	<meta name="copyright" content="Information om copyright">
 	
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Knewave&display=swap" rel="stylesheet">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-<h2>KlimaKassen</h2>
+<body class="theme-dark">
+    <header class="header">
+        <div class="logo">Logo</div>
+        <button id="theme-toggle" aria-label="Skift tema" class="btn btn-sm btn-light">
+            🌙
+        </button>
+        <button class="menu-btn" aria-label="Menu">&#9776;</button>
+        <div class="hero">
+            <h1>Noget spændende</h1>
+            <p>Noget spændende uddybning</p>
+            <button class="btn-primary">Book nu</button>
+        </div>
+    </header>
+
+    <section class="services">
+        <h2>Services</h2>
+        <ul>
+            <li>♻️ Eleverne lærer at reparere, upcycle og genbruge...</li>
+            <li>📘 Vi formidler klimavenlige tiltag i øjenhøjde...</li>
+            <li>🎒 Eleverne får kompetencer og selvtillid...</li>
+        </ul>
+    </section>
+
+    <section class="mission">
+        <h2>Vores mission</h2>
+        <p>KlimaKassen er supplerende værktøj...</p>
+        <img src="images/mission.jpg" alt="Children learning outdoors">
+    </section>
+
+    <section class="process">
+        <h2>Processen fra start til slut</h2>
+        <ol>
+            <li><span>01</span> Du udfylder vores formular...</li>
+            <li><span>02</span> Vi kommer i vores KlimaKasse...</li>
+            <li><span>03</span> Når forløbet er slut får klassen...</li>
+        </ol>
+    </section>
+
+    <section class="booking">
+        <h2>Booking af KlimaKassen</h2>
+        <form>
+            <input type="text" placeholder="Skolens/Organisationens navn">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Tlf.nr.">
+            <input type="text" placeholder="Kontaktpersons fulde navn">
+            <button type="submit" class="btn-primary">Send</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="socials">
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+        <div class="contact-info">
+            <p>@Klimakassen</p>
+            <p>Email: klimakassen@mail.com</p>
+            <p>Industrivej 10, 4200 Slagelse</p>
+        </div>
+    </footer>
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.querySelector('body');
+
+        function setTheme(theme) {
+            if (theme === 'light') {
+                body.classList.remove('theme-dark');
+                body.classList.add('theme-light');
+                toggleBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.remove('theme-light');
+                body.classList.add('theme-dark');
+                toggleBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        toggleBtn.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('theme-dark') ? 'dark' : 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+
 </body>
 </html>

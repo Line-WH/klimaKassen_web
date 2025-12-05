@@ -10,7 +10,7 @@ $link-decoration: none;
 
 // 4. Include any default map overrides here
 $custom-colors: (
-	"farve": $cyan-400,
+	"lysrød": #472325,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -18,3 +18,143 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+//globale styles
+$color-accent: #47B490;
+$color-button-bg: #F2A65A;
+$color-button-text: #331516;
+
+// Variabler til default dark mode
+$color-bg-dark: #331516;
+$color-text-light: #F8FFE0;
+
+
+//variabler til light mode
+$color-bg-light: #f8ffe0;
+$color-text-dark: #331516;
+
+//mixin til vore cta knap
+@mixin cta-btn {
+  background-color: $color-button-bg;
+  color: $color-button-text;
+  font-family: "Knewave", serif;
+  padding: 0.6em 4em;
+  border: none;
+  border-radius: 999px;
+  transition: 0.3s ease;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+//klasser til light/dark toggle
+
+.theme-dark {
+  --bs-body-bg: #331516;
+  --bs-body-color: #F8FFE0;
+  --bs-primary: #F2A65A;
+  --bs-link-color: #47B490;
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+
+  .btn-primary {
+    @include cta-btn;
+  }
+}
+
+.theme-light {
+  --bs-body-bg: #F8FFE0;
+  --bs-body-color: #331516;
+  --bs-primary: #F2A65A;
+  --bs-link-color: #47B490;
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+
+  .btn-primary {
+    @include cta-btn;
+  }
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: $color-button-bg;
+  color: $color-button-text;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+
+body {
+  background-color: $color-bg-dark;
+  color: $color-text-light;
+
+  h1, h2, h3 {
+    font-family: "Knewave", serif;
+    color: $color-text-light;
+  }
+
+  a {
+    color: #64c59f; // mint green
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .btn-primary {
+    background-color: $color-button-bg;
+    color: $color-button-text;
+    font-family: "Knewave", serif;
+    padding: 0.6em 4em;
+    border: none;
+    border-radius: 999px;
+    transition: 0.3s ease;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  .services, .mission, .process, .booking {
+    padding: 1.5rem;
+  }
+
+  input {
+    background: darken($color-bg-dark, 5%);
+    border: none;
+    border-radius: 999px;
+    color: $color-text-light;
+    padding: 0.8em;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .footer {
+    background: darken($color-bg-dark, 10%);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+
+    a {
+      color: $color-accent;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+  }
+}
+
+
