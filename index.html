@@ -19,41 +19,158 @@
 </head>
 
 <body class="theme-dark">
-    <header class="header">
-        <div class="logo">
-            <img id="logoImg" src="svg/klimakassen-logo-primary-color-dark.svg" alt="KlimaKassen Logo">
-        </div>
-        <button id="theme-toggle" aria-label="Skift farvetema" class="btn btn-sm btn-light">Skift farvetema</button>
-        <button class="menu-btn" aria-label="Menu">&#9776;</button>
-        <div class="hero">
-            <h1>Noget spændende</h1>
-            <p>Noget spændende uddybning</p>
-            <button class="btn-primary">Book nu</button>
-        </div>
-    </header>
 
-    <section class="services">
-        <h2>Services</h2>
-        <ul>
-            <li>♻️ Eleverne lærer at reparere, upcycle og genbruge...</li>
-            <li>📘 Vi formidler klimavenlige tiltag i øjenhøjde...</li>
-            <li>🎒 Eleverne får kompetencer og selvtillid...</li>
+<nav class="navbar">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-7 d-flex align-items-center justify-content-between">
+                <a href="index.html" class="navbar-brand">
+                    <img id="logoImg" src="svg/klimakassen-logo-primary-color-dark.svg" alt="KlimaKassen Logo">
+                </a>
+            </div>
+            <div class="col-5 d-flex align-items-center gap-2">
+                <button id="theme-toggle" class="btn" aria-label="Skift farvetema">
+                    Skift farve
+                </button>
+                <button
+                        class="navbar-toggler menu-btn"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
+                    <span>&#9776;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="collapse navbar-collapse mobile-menu" id="navbarNav">
+        <ul class="navbar-nav text-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Hjem</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#servicesSection">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#bookingSection">Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#missionSection">Om os</a>
+            </li>
         </ul>
+    </div>
+</nav>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col hero w-100 p-4 flex-column align-content-center text-center rounded-bottom-5 mb-4">
+                <h1 class="mb-1">Noget spændende</h1>
+                <p class="mb-4">Noget spændende uddybning</p>
+                <button class="btn-primary">Book nu</button>
+            </div>
+        </div>
     </section>
 
-    <section class="mission">
-        <h2>Vores mission</h2>
-        <p>KlimaKassen er supplerende værktøj...</p>
-        <img src="image/mission.jpg" alt="">
+    <section id="servicesSection" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <h2 class="text-center">Services</h2>
+                </div>
+                <div class="col-1">
+                    <img src="svg/blomsterpunkt.svg" alt="Blomsterpunkt Logo">
+                </div>
+                <div class="col-11">
+                    <p>Eleverne lærer at reparere, upcycle og genbruge ting hjemmefra.</p>
+                </div>
+
+                <br>
+
+                <div class="col-1">
+                    <img src="svg/blomsterpunkt.svg" alt="Blomsterpunkt Logo">
+                </div>
+                <div class="col-11">
+                    <p>Vi formidler klimavenlige tiltag i øjenhøjde og praksisnært.</p>
+                </div>
+
+                <br>
+
+                <div class="col-1">
+                    <img src="svg/blomsterpunkt.svg" alt="Blomsterpunkt Logo">
+                </div>
+                <div class="col-11">
+                    <p>Eleverne får kompetencer og selvtillid til at tage ansvar for deres eget klima-aftryk.</p>
+                </div>
+
+                <br>
+
+                <div class="col-1">
+                    <img src="svg/blomsterpunkt.svg" alt="Blomsterpunkt Logo">
+                </div>
+                <div class="col-11">
+                    <p>Vognen er udstyret med alt i skal bruge. I skal bare møde op!</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="process">
-        <h2>Processen fra start til slut</h2>
-        <ol>
-            <li><span>01</span> Du udfylder vores formular...</li>
-            <li><span>02</span> Vi kommer i vores KlimaKasse...</li>
-            <li><span>03</span> Når forløbet er slut får klassen...</li>
-        </ol>
+    <section id="missionSection" class="mission position-relative">
+        <div class="wave">
+            <img src="svg/Rectangle 1.svg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-2">Vores mission</h2>
+                    <p>KlimaKassen er supplerende værktøj til undervisere for at gøre det så nemt at inkludere den grønne omstilling i skolegangen som muligt.</p>
+                    <p>Vores drøm er at alle skoler har et KlimaKit og at elever over hele landet får kompetencer der kan hjælpe dem såvel som generationerne efter.</p>
+                </div>
+                <div class="col-12 w-100">
+                    <img src="image/underviser.jpg" alt="undervisning udendørs">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="bookingSection" class="process">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <h2 class="text-center mb-2">Processen fra start til slut</h2>
+                </div>
+
+                <div class="col-1">
+                <img src="svg/punkt1.svg" alt="">
+                </div>
+                <div class="col-11">
+                    <p>Du udfylder vores formular og vi tager kontakt til dig for at tilrettelægge det forløb du ønsker.</p>
+                </div>
+
+                <br>
+
+                <div class="col-1">
+                    <img src="svg/punkt2.svg" alt="">
+                </div>
+                <div class="col-11">
+                    <p>Du udfylder vores formular og vi tager kontakt til dig for at tilrettelægge det forløb du ønsker.</p>
+                </div>
+
+                <br>
+
+                <div class="col-1">
+                    <img src="svg/punkt3.svg" alt="">
+                </div>
+                <div class="col-11">
+                    <p>Du udfylder vores formular og vi tager kontakt til dig for at tilrettelægge det forløb du ønsker.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="booking bg-lysrød m-5">

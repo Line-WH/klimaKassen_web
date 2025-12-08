@@ -63,6 +63,11 @@ $color-text-dark: #331516;
     @include cta-btn;
   }
 
+  .header.scrolled {
+    background-color: $color-bg-dark;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
 }
 
 .theme-light {
@@ -73,6 +78,10 @@ $color-text-dark: #331516;
     @include cta-btn;
   }
 
+  .header.scrolled {
+    background-color: $color-bg-light;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
 
   h1, h2, h3, h4, h5, h6, span, li {
     color: $color-text-dark;
@@ -93,74 +102,121 @@ $color-text-dark: #331516;
 }
 
 
-#theme-toggle {
-  position: fixed;
-  font-family: "Knewave", serif;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-  font-size: 1.25rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-  background-color: $color-accent;
-  color: $color-button-text;
-
-  &:hover {
-    filter: brightness(0.9);
-  }
-}
-
-
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 
   .btn-primary {
     @include cta-btn;
   }
+}
 
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  padding: 1rem;
+
+  .mobile-menu {
+    background-color: inherit;
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    z-index: 1000;
 
-    &.scrolled {
-      background-color: $color-bg-dark;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    .nav-link {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      font-family: "Knewave", serif;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
+
+  #theme-toggle {
+    font-family: "Knewave", sans-serif;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: $color-accent;
+    color: $color-button-text;
+  }
+
   #logoImg {
-    max-width: 300px;
+    width: 200px;
     height: auto;
     display: block;
   }
 
+  .menu-btn {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
-  a {
-    color: #64c59f;
-    text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
+    line-height: 1;
+    font-family: inherit;
+    color: inherit;
   }
+
+}
+
+.hero {
+  background-image: url('../image/drengmedcykel.jpg');
+  height: 50vh;
+  object-fit: contain;
+
+}
 
   .services, .mission, .process, .booking {
     padding: 1.5rem;
   }
 
-  input {
+.mission {
+  position: relative;
+  color: $color-text-light !important;
+  overflow: hidden;
+  padding-top: 6rem;
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0; // behind content
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1; // above the wave
+  }
+}
+
+.section {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+
+input {
     background: darken($color-bg-dark, 5%);
     border: none;
     border-radius: 999px;
@@ -182,7 +238,6 @@ body {
       text-decoration: none;
     }
   }
-}
 
 
 
