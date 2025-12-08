@@ -64,18 +64,32 @@ $color-text-dark: #331516;
 }
 
 .theme-light {
-  --bs-body-bg: #F8FFE0;
-  --bs-body-color: #331516;
-  --bs-primary: #F2A65A;
-  --bs-link-color: #47B490;
+  background-color: $color-bg-light;
+  color: $color-text-dark;
 
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
+  h1, h2, h3, h4, h5, h6, span, li {
+    color: $color-text-dark;
+  }
 
   .btn-primary {
-    @include cta-btn;
+    background-color: $color-button-bg;
+    color: $color-button-text;
+  }
+
+  input {
+    background: lighten($color-accent, 5%);
+    color: $color-text-dark;
+  }
+
+  .footer {
+    color: $color-text-light;
+
+    a {
+      color: $color-accent;
+    }
   }
 }
+
 
 #theme-toggle {
   position: fixed;
@@ -100,6 +114,7 @@ $color-text-dark: #331516;
 body {
   background-color: $color-bg-dark;
   color: $color-text-light;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   h1, h2, h3 {
     font-family: "Knewave", serif;
@@ -107,7 +122,7 @@ body {
   }
 
   a {
-    color: #64c59f; // mint green
+    color: #64c59f;
     text-decoration: none;
 
     &:hover {
@@ -144,7 +159,7 @@ body {
   }
 
   .footer {
-    background: darken($color-bg-dark, 10%);
+    background: darken($color-bg-dark, 5%);
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
@@ -155,6 +170,10 @@ body {
       text-decoration: none;
     }
   }
+}
+
+.booking {
+  border-radius: 50px;
 }
 
 

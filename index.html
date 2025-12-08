@@ -21,9 +21,7 @@
 <body class="theme-dark">
     <header class="header">
         <div class="logo">Logo</div>
-        <button id="theme-toggle" aria-label="Skift tema" class="btn btn-sm btn-light">
-            🌙
-        </button>
+        <button id="theme-toggle" aria-label="Skift farvetema" class="btn btn-sm btn-light">Skift farvetema</button>
         <button class="menu-btn" aria-label="Menu">&#9776;</button>
         <div class="hero">
             <h1>Noget spændende</h1>
@@ -44,7 +42,7 @@
     <section class="mission">
         <h2>Vores mission</h2>
         <p>KlimaKassen er supplerende værktøj...</p>
-        <img src="images/mission.jpg" alt="Children learning outdoors">
+        <img src="" alt="">
     </section>
 
     <section class="process">
@@ -56,15 +54,36 @@
         </ol>
     </section>
 
-    <section class="booking">
+    <section class="booking bg-lysrød m-5">
         <h2>Booking af KlimaKassen</h2>
         <form>
-            <input type="text" placeholder="Skolens/Organisationens navn">
-            <input type="email" placeholder="Email">
-            <input type="tel" placeholder="Tlf.nr.">
-            <input type="text" placeholder="Kontaktpersons fulde navn">
-            <button type="submit" class="btn-primary">Send</button>
+            <div class="mb-3">
+                <label for="skole-navn" class="form-label">Skolens/Organisationens navn</label>
+                <input type="text" id="skole-navn" class="form-control" placeholder="Indtast navnet">
+                <div id="schoolHelp" class="form-text">Navnet på den skole eller organisation, du repræsenterer.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Vi bruger kun din email til bookingformål.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="tlf-nummer" class="form-label">Tlf.nr.</label>
+                <input type="tel" id="tlf-nummer" class="form-control" aria-describedby="tlfNumberHelp">
+                <div id="tlfNumberHelp" class="form-text">Vi bruger kun nummeret under forløbet og sletter det efter.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="underviser-navn" class="form-label">Kontaktpersons fulde navn</label>
+                <input type="text" id="underviser-navn" class="form-control" aria-describedby="nameHelp">
+                <div id="nameHelp" class="form-text">Så vi ved hvem vi kan kontakte om praktiske ting.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send</button>
         </form>
+
     </section>
 
     <footer class="footer">
