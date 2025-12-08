@@ -20,8 +20,10 @@
 
 <body class="theme-dark">
     <header class="header">
-        <div class="logo">Logo</div>
-        <button id="theme-toggle" aria-label="Skift farvetema" class="btn btn-sm btn-light">Skift til lightmode</button>
+        <div class="logo">
+            <img id="logoImg" src="svg/klimakassen-logo-primary-color-dark.svg" alt="KlimaKassen Logo">
+        </div>
+        <button id="theme-toggle" aria-label="Skift farvetema" class="btn btn-sm btn-light">Skift farvetema</button>
         <button class="menu-btn" aria-label="Menu">&#9776;</button>
         <div class="hero">
             <h1>Noget spændende</h1>
@@ -42,7 +44,7 @@
     <section class="mission">
         <h2>Vores mission</h2>
         <p>KlimaKassen er supplerende værktøj...</p>
-        <img src="" alt="">
+        <img src="image/mission.jpg" alt="">
     </section>
 
     <section class="process">
@@ -107,24 +109,54 @@
 
         const toggleBtn = document.getElementById('theme-toggle');
         const body = document.querySelector('body');
+        const logoImg = document.getElementById('logoImg');
 
         function setTheme(theme) {
+            // Set theme class and button label
             if (theme === 'light') {
                 body.classList.remove('theme-dark');
                 body.classList.add('theme-light');
-                toggleBtn.textContent = '☀️';
-                localStorage.setItem('theme', 'light');
+                toggleBtn.textContent = 'Skift til darkmode';
+                toggleBtn.setAttribute('aria-label', 'Skift til mørk tilstand');
+
+                // Fade logo out
+                logoImg.style.opacity = '0';
+
+                setTimeout(() => {
+                    logoImg.src = 'svg/klimakassen-logo-primary-color-light.svg';
+                    logoImg.style.opacity = '1';
+                }, 300); // Match the CSS transition time
             } else {
                 body.classList.remove('theme-light');
                 body.classList.add('theme-dark');
-                toggleBtn.textContent = '🌙';
-                localStorage.setItem('theme', 'dark');
+                toggleBtn.textContent = 'Skift til lightmode';
+                toggleBtn.setAttribute('aria-label', 'Skift til lys tilstand');
+
+                logoImg.style.opacity = '0';
+
+                setTimeout(() => {
+                    logoImg.src = 'svg/klimakassen-logo-primary-color-dark.svg';
+                    logoImg.style.opacity = '1';
+                }, 300);
             }
         }
+
         toggleBtn.addEventListener('click', () => {
             const currentTheme = body.classList.contains('theme-dark') ? 'dark' : 'light';
             setTheme(currentTheme === 'dark' ? 'light' : 'dark');
         });
+
+        // Detect scroll position to toggle header background
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
     </script>
 
 </body>
