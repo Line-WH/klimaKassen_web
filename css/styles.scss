@@ -11,6 +11,8 @@ $link-decoration: none;
 // 4. Include any default map overrides here
 $custom-colors: (
 	"lysrød": #472325,
+    "lys": #f8ffe0,
+
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -194,13 +196,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 0; // behind content
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+    z-index: -1; // behind content
   }
 
   .container {
@@ -215,16 +211,27 @@ body {
   height: auto;
 }
 
-
 input {
-    background: darken($color-bg-dark, 5%);
-    border: none;
-    border-radius: 999px;
-    color: $color-text-light;
-    padding: 0.8em;
-    margin-bottom: 1rem;
-    width: 100%;
-  }
+  background: darken($color-bg-dark, 5%);
+  border-color: lighten($color-bg-dark, 5%) !important;
+  border-radius: 999px !important;
+  color: $color-text-light;
+  padding: 0.8em;
+  width: 100%;
+}
+
+.booking {
+  border-radius: 50px;
+}
+
+label {
+  font-family: "Klee One", sans-serif;
+}
+
+.form-text {
+  font-family: "Klee One", sans-serif;
+}
+
 
   .footer {
     background-color: #261010;
@@ -236,11 +243,6 @@ input {
     }
   }
 
-
-
-.booking {
-  border-radius: 50px;
-}
 
 h1, h2, h3 {
   font-family: "Knewave", serif;
