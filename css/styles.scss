@@ -227,10 +227,7 @@ input {
   }
 
   .footer {
-    background: darken($color-bg-dark, 5%);
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    background-color: #261010;
 
     a {
       color: $color-accent;
