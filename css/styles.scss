@@ -256,33 +256,60 @@ h4, h5, h6, p, li {
 
 
 //theme toggler
-.theme-toggle-btn {
 
+.theme-switch {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 50px;
-  height: 50px;
-  background-color: $color-accent;
-  border-radius: 50%;
-  border: none;
+  bottom: 1rem;
+  right: 1rem;
+  width: 80px;
+  height: 40px;
+  background-color: #f8ffe0;
+  border-radius: 999px;
+  border: 2px solid #472325;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 1100;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  padding: 0 8px;
+  z-index: 2000;
   transition: background-color 0.3s ease;
 
-  .icon {
-    font-size: 1.2rem;
-    color: $color-button-text;
+  .icon-sun,
+  .icon-moon {
+    font-size: 1.3rem;
+    z-index: 2;
+    transition: color 0.3s ease;
+    color: #472325;
   }
 
-  &:hover {
-    filter: brightness(0.95);
+  &.light-mode {
+    background-color: #f8ffe0;
+    border-color: #472325;
+
+    .icon-sun {
+      color: #f2a65a;
+    }
+
+    .icon-moon {
+      color: #f8ffe0;
+    }
+  }
+
+  &.dark-mode {
+    background-color: #472325;
+    border-color: #f8ffe0;
+
+    .icon-sun {
+      color: #f8ffe0;
+    }
+
+    .icon-moon {
+      color: #f2a65a;
+    }
+
   }
 }
+
 
 // Modal overlay
 
