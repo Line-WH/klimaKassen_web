@@ -23,6 +23,8 @@
 
 <body class="theme-dark">
 
+<a href="#main-content" class="visually-hidden-focusable">Spring til indhold</a>
+
 <nav class="navbar navbar-expand-md">
     <div class="container">
         <a href="index.html" class="navbar-brand">
@@ -43,7 +45,7 @@
 
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-md-4 text-end">
+            <ul class="navbar-nav ms-auto text-end">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Hjem</a>
                 </li>
@@ -61,6 +63,7 @@
     </div>
 </nav>
 
+<main id="main-content">
     <section class="hero-section">
         <div class="container-fluid">
             <div class="row">
@@ -68,52 +71,57 @@
 
                     <div class="overlay"></div>
 
-                      <div class="hero-content position-relative">
-                          <h1 class="mb-2">Det mobile værksted</h1>
-                          <p>Skal vi ud til din skole?</p>
-                          <br>
-                          <button class="btn-primary">Book nu</button>
-                      </div>
+                    <div class="hero-content position-relative">
+                        <h1 class="mb-2">Det mobile værksted</h1>
+                        <p>Skal vi ud til din skole?</p>
+                        <br>
+                        <button class="btn-primary">Book nu</button>
+                    </div>
 
                 </div>
             </div>
         </div>
     </section>
 
+    <br>
+
+
     <section id="servicesSection" class="services">
         <div class="container">
             <div class="row">
 
-                <div class="col-12 mb-2">
-                    <h2 class="text-center">Services</h2>
+                <div class="col-12 col-md-6 mb-4 mt-4">
+                    <h2 class="text-start mb-4">Services</h2>
+
+                    <div class="d-flex align-items-start mb-3">
+                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt" class="me-2 mt-1" style="width: 24px; height: auto;">
+                        <p class="mb-0">Eleverne lærer at reparere, upcycle og genbruge ting hjemmefra.</p>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-3">
+                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt" class="me-2 mt-1" style="width: 24px; height: auto;">
+                        <p class="mb-0">Vi formidler klimavenlige tiltag i øjenhøjde og praksisnært.</p>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-3">
+                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt" class="me-2 mt-1" style="width: 24px; height: auto;">
+                        <p class="mb-0">Eleverne får kompetencer og selvtillid til at tage ansvar for deres eget klima-aftryk.</p>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-3">
+                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt" class="me-2 mt-1" style="width: 24px; height: auto;">
+                        <p class="mb-0">Vognen er udstyret med alt i skal bruge. I skal bare møde op!</p>
+                    </div>
                 </div>
 
-                <div class="col-12 col-md-6 d-flex mb-3">
-                    <div class="me-2">
-                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt">
-                    </div>
-                    <p>Eleverne lærer at reparere, upcycle og genbruge ting hjemmefra.</p>
-                </div>
 
-                <div class="col-12 col-md-6 d-flex mb-3">
-                    <div class="me-2">
-                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt">
-                    </div>
-                    <p>Vi formidler klimavenlige tiltag i øjenhøjde og praksisnært.</p>
-                </div>
+                <div class="col-12 col-md-6 mb-4 mt-4">
+                    <h2 class="text-start mb-4">Vores værdisæt</h2>
 
-                <div class="col-12 col-md-6 d-flex mb-3">
-                    <div class="me-2">
-                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt">
-                    </div>
-                    <p>Eleverne får kompetencer og selvtillid til at tage ansvar for deres eget klima-aftryk.</p>
-                </div>
-
-                <div class="col-12 col-md-6 d-flex mb-3">
-                    <div class="me-2">
-                        <img src="svg/blomsterpunkt.svg" alt="blomsterpunkt">
-                    </div>
-                    <p>Vognen er udstyret med alt i skal bruge. I skal bare møde op!</p>
+                    <p>Vi holder os opdateret på tilgængelighedsloven som den udvikler sig. Det er vigtigt for os at alle kan interegere med vores digitale platforme samt føle sig mødt og set.</p>
+                    <p>Vores vogn er elektrisk og alle vores værktøjer er produceret i Danmark for at mindske vores klimaaftryk.</p>
+                    <p>Vores mening er at alle skal have adgang til klimaundervisning uanset, køn, handicap, etnicitet eller seksualitet. Vi er alle mennesker i planetens øjne.</p>
+                    <p>Vi indgår aktivt i samarbejder med andre organisationer som deler vores passion for klimavenlighed og undervisning for at kunne styrke vores lokalsamfund. Vi støtter også aktivt op om kommunale grønne tiltag i Slagelse.</p>
                 </div>
             </div>
         </div>
@@ -129,123 +137,103 @@
 
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <h2 class="mb-2">Vores mission</h2>
+                <div class="col-12 col-md-6 ps-md-5">
+                    <h2 class="mb-4 text-start">Vores mission</h2>
                     <p>KlimaKassen er supplerende værktøj til undervisere for at gøre det så nemt at inkludere den grønne omstilling i skolegangen som muligt.</p>
                     <p>Vores drøm er at alle skoler har et KlimaKit og at elever over hele landet får kompetencer der kan hjælpe dem såvel som generationerne efter.</p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <img src="image/underviser.jpg" alt="undervisning udendørs" class="img-fluid rounded-4 mb-3 mb-md-0">
+                    <img src="image/underviser.jpg" loading="lazy" alt="undervisning udendørs" class="img-fluid rounded-4 mb-3 mb-md-0">
                 </div>
-
-                <div class="col-12 col-md-6">
-                    <h3 class="text-center mb-2 mt-4">Vores værdisæt</h3>
-                    <p>Vi holder os opdateret på tilgængelighedsloven som den udvikler sig. Det er vigtigt for os at alle kan interegere med vores digitale platforme samt føle sig mødt og set.</p>
-                    <p>Vores vogn er elektrisk og alle vores værktøjer er produceret i Danmark for at mindske vores klimaaftryk.</p>
-                    <p>Vores mening er at alle skal have adgang til klimaundervisning uanset, køn, handicap, etnicitet eller seksualitet. Vi er alle mennesker i planetens øjne.</p>
-                    <p>Vi indgår aktivt i samarbejder med andre organisationer som deler vores passion for klimavenlighed og undervisning for at kunne styrke vores lokalsamfund. Vi støtter også aktivt op om kommunale grønne tiltag i Slagelse.</p>
-                </div>
-            </div>
-        </div>
-
-
-
-    </section>
-
-
-    <section id="bookingSection" class="process">
-
-
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12 mb-2">
-                    <h2 class="text-center mb-2">Processen fra start til slut</h2>
-                </div>
-
-                <div class="col-12 col-md-4 mb-4">
-                    <img src="svg/punkt1.svg" alt="punkt1" class="mb-2">
-                    <p>Du udfylder vores formular og vi tager kontakt til dig for at tilrettelægge det forløb du ønsker.</p>
-                </div>
-
-                <div class="col-12 col-md-4 mb-4">
-                    <img src="svg/punkt2.svg" alt="punkt2" class="mb-2">
-                    <p>Vi kommer i vores KlimaKasse til skolen efter aftale og starter forløbet. Kassen vil være åben for eleverne til at bruge som et værksted igennem hele forløbet.</p>
-                </div>
-
-                <div class="col-12 col-md-4 mb-4">
-                    <img src="svg/punkt3.svg" alt="punkt3" class="mb-2">
-                    <p>Når forløbet er slut får klassen/holdet et KlimaKit som indeholder midler til at fortsætte det eleverne har lært.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section class="booking bg-lysrød m-5">
+    <section id="bookingSection" class="booking-section my-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6">
-                    <h2 class="mb-2 mt-2 text-center">Booking af KlimaKassen</h2>
+            <div class="row g-5">
+
+                <!-- Process Section -->
+                <div class="col-12 col-lg-6">
+                    <h2 class="text-start mb-4">Processen fra start til slut</h2>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <img src="svg/punkt1.svg" alt="punkt1" class="me-3" style="width: 40px;">
+                        <p class="mb-0">Du udfylder vores formular og vi tager kontakt til dig for at tilrettelægge det forløb du ønsker.</p>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <img src="svg/punkt2.svg" alt="punkt2" class="me-3" style="width: 40px;">
+                        <p class="mb-0">Vi kommer i vores KlimaKasse til skolen efter aftale og starter forløbet. Kassen vil være åben for eleverne til at bruge som et værksted igennem hele forløbet.</p>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <img src="svg/punkt3.svg" alt="punkt3" class="me-3" style="width: 40px;">
+                        <p class="mb-0">Når forløbet er slut får klassen/holdet et KlimaKit som indeholder midler til at fortsætte det eleverne har lært.</p>
+                    </div>
+                </div>
+
+                <!-- Booking Form Section -->
+                <div class="col-12 col-lg-6 bg-lysrød rounded-4 p-4">
+                    <h2 class="mb-3 text-start">Booking af KlimaKassen</h2>
 
                     <form>
-                        <div class="mb-1">
+                        <div class="mb-4">
                             <label for="skole-navn" class="form-label text-start">Skolens/Organisationens navn</label>
                             <input type="text" id="skole-navn" class="form-control text-start">
                         </div>
 
-                        <div class="mb-1">
+                        <div class="mb-4">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" id="email" class="form-control" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text text-lys">Vi bruger kun din email til bookingformål.</div>
                         </div>
 
-                        <div class="mb-1">
+                        <div class="mb-4">
                             <label for="tlf-nummer" class="form-label">Tlf.nr.</label>
                             <input type="tel" id="tlf-nummer" class="form-control" aria-describedby="tlfNumberHelp">
                             <div id="tlfNumberHelp" class="form-text text-lys">Vi bruger kun nummeret under forløbet og sletter det efter.</div>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="underviser-navn" class="form-label">Kontaktpersons fulde navn</label>
                             <input type="text" id="underviser-navn" class="form-control" aria-describedby="nameHelp">
                             <div id="nameHelp" class="form-text text-lys">Så vi ved hvem vi kan kontakte om praktiske ting.</div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Send</button>
+                        <button type="submit" class="btn btn-primary mb-4">Send</button>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
 
 
 
-    <section id="FootertSection">
-        <div>
-            <img src="svg/footergrafik.svg" alt="" class="img-fluid">
+
+    <section id="FootertSection" class="footer-wrapper position-relative">
+
+        <div class="footer-grafik w-100 position-relative">
+            <img src="svg/footergrafik.svg" alt="Dekorativ grafik" class="img-fluid w-100 d-block">
         </div>
 
-        <footer class="footer">
+        <footer class="footer py-4">
             <div class="container">
-                <div class="row text-center text-md-start">
-                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                        <div class="socials">
-                            <a href="#">
-                                <img src="svg/Youtube.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="svg/Instagram.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="svg/Facebook.svg" alt="">
-                            </a>
+                <div class="row align-items-start">
+
+                    <!-- SOCIALS -->
+                    <div class="col-12 col-md-4 d-flex flex-column mb-4 mb-md-0 text-start">
+                        <div class="socials mb-2">
+                            <a href="#"><img src="svg/Youtube.svg" alt="YouTube"></a>
+                            <a href="#"><img src="svg/Instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="svg/Facebook.svg" alt="Facebook"></a>
                         </div>
-                        <div>
-                            <h2 class="mb-3">@Klimakassen</h2>
-                        </div>
+                        <h3 class="mb-0">@Klimakassen</h3>
                     </div>
 
-                    <div class="contact col-12 col-md-6 mb-4 mb-md-0 d-flex flex-column">
+                    <!-- KONTAKT -->
+                    <div class="col-12 col-md-4 d-flex flex-column mb-4 text-start">
                         <div class="contact-info">
                             <h3>Kontakt</h3>
                             <p>Tlf.nr: xx xx xx xx</p>
@@ -253,95 +241,130 @@
                             <p>Industrivej 10, 4200 Slagelse</p>
                         </div>
                     </div>
-                    <div class="contact col-12 col-md-6 d-flex flex-column">
+
+                    <!-- FORMELT -->
+                    <div class="col-12 col-md-4 d-flex flex-column mb-4 text-start">
                         <div class="contact-info">
                             <h3>Det formelle</h3>
                             <p>CVR: xxx xxx</p>
                             <p>Rettigheder og lovgivning</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </footer>
+
+
+
     </section>
 
-<button id="theme-toggle" class="theme-switch" aria-label="Skift farvetema">
-    <i class="bi bi-sun-fill icon-sun"></i>
-    <i class="bi bi-moon-stars-fill icon-moon"></i>
-    <div class="toggle-ball"></div>
-</button>
 
 
-<div id="prototypeModal" class="modal-backdrop d-none">
-        <div class="modal-box">
-            <p><strong>Prototype:</strong> Lys tilstand er under udvikling og virker ikke fuldt ud endnu.</p>
+    <button
+            id="theme-toggle"
+            class="theme-switch"
+            aria-label="Skift til lys tilstand"
+            aria-pressed="false"
+    >
+        <i class="bi bi-sun-fill icon-sun"></i>
+        <i class="bi bi-moon-stars-fill icon-moon"></i>
+    </button>
+
+
+    <div id="prototypeModal" class="modal-backdrop d-none" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+        <div class="modal-box" role="document">
+            <p id="modalDesc">
+                <strong>Prototype:</strong> Lys tilstand er under udvikling og virker ikke fuldt ud endnu.
+            </p>
             <button id="closeModal" class="btn btn-primary mt-2">Okay</button>
         </div>
     </div>
+</main>
+
+
+
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    const logoImg = document.getElementById('logoImg');
+    const modal = document.getElementById('prototypeModal');
+    const closeModalBtn = document.getElementById('closeModal');
 
-        const toggleBtn = document.getElementById('theme-toggle');
-        const body = document.querySelector('body');
-        const logoImg = document.getElementById('logoImg');
-        const modal = document.getElementById('prototypeModal');
-        const closeModalBtn = document.getElementById('closeModal');
+    let lastFocusedElement = null;
 
-        function setTheme(theme) {
-            if (theme === 'light') {
-                body.classList.remove('theme-dark');
-                body.classList.add('theme-light');
+    function setTheme(theme) {
+        if (theme === 'light') {
+            body.classList.remove('theme-dark');
+            body.classList.add('theme-light');
 
-                toggleBtn.classList.remove('dark-mode');
-                toggleBtn.classList.add('light-mode');
+            toggleBtn.setAttribute('aria-label', 'Skift til mørk tilstand');
+            toggleBtn.setAttribute('aria-pressed', 'true');
 
-                logoImg.style.opacity = '0';
-                setTimeout(() => {
-                    logoImg.src = 'svg/klimakassen-logo-primary-color-light.svg';
-                    logoImg.style.opacity = '1';
-                }, 300);
+            logoImg.style.opacity = '0';
+            setTimeout(() => {
+                logoImg.src = 'svg/klimakassen-logo-primary-color-light.svg';
+                logoImg.style.opacity = '1';
+            }, 300);
 
-                modal.classList.remove('d-none');
-            } else {
-                body.classList.remove('theme-light');
-                body.classList.add('theme-dark');
+            // Show modal
+            lastFocusedElement = document.activeElement;
+            modal.classList.remove('d-none');
+            closeModalBtn.focus();
 
-                toggleBtn.classList.remove('light-mode');
-                toggleBtn.classList.add('dark-mode');
+        } else {
+            body.classList.remove('theme-light');
+            body.classList.add('theme-dark');
 
-                logoImg.style.opacity = '0';
-                setTimeout(() => {
-                    logoImg.src = 'svg/klimakassen-logo-primary-color-dark.svg';
-                    logoImg.style.opacity = '1';
-                }, 300);
+            toggleBtn.setAttribute('aria-label', 'Skift til lys tilstand');
+            toggleBtn.setAttribute('aria-pressed', 'false');
+
+            logoImg.style.opacity = '0';
+            setTimeout(() => {
+                logoImg.src = 'svg/klimakassen-logo-primary-color-dark.svg';
+                logoImg.style.opacity = '1';
+            }, 300);
+        }
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        const currentTheme = body.classList.contains('theme-dark') ? 'dark' : 'light';
+        setTheme(currentTheme === 'dark' ?   'light' : 'dark');
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        modal.classList.add('d-none');
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
+    });
+
+    // Optional: Close modal with Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('d-none')) {
+            modal.classList.add('d-none');
+            if (lastFocusedElement) {
+                lastFocusedElement.focus();
             }
         }
+    });
 
-        toggleBtn.addEventListener('click', () => {
-            const currentTheme = body.classList.contains('theme-dark') ? 'dark' : 'light';
-            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-        });
+    // Scroll effect on navbar
+    const header = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
 
-        closeModalBtn.addEventListener('click', () => {
-            modal.classList.add('d-none');
-        });
-
-
-        // Detect scroll position to toggle header background
-        const header = document.querySelector('.navbar');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-    </script>
 
 </body>
 </html>
